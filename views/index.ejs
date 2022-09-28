@@ -3,9 +3,9 @@
     <div class="row justify-content-center mt-5">
         <!-- <div class="col-6"> -->
             <div class="card text-bg-light shadow">
-                <div class="card-body">
+                <div class="card-body ">
                 <div class="mt-5">
-                    <h2>ʕ♥ᴥ♥ʔ Add a picture here ʕ♥ᴥ♥ʔ</h2>
+                    <h2 class="form-font-fam">ʕ♥ᴥ♥ʔ Add a picture here ʕ♥ᴥ♥ʔ</h2>
                     <form action="/post/createPost" enctype="multipart/form-data" method="POST">
                         <div class="mb-3">
                             <label for="imgUpload" class="form-label">Image (•ᴥ• )́</label>
@@ -20,7 +20,7 @@
                         <textarea class="form-control" id="description" name="description"></textarea>
                     </div>
                   
-                    <button type="submit" class="btn btn-info position-relative top-0" value="Upload">-`ღ´- Upload -`ღ´-</button> 
+                    <button type="submit" class="btn btn-info position-relative top-0 btn-lg" value="Upload">-`ღ´- Upload -`ღ´-</button> 
                   <!-- <hr> -->
                     </form>
                 </div>
@@ -30,5 +30,78 @@
         <!-- <div class="col-6"></div> -->
     </div>
 </div>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <ul class=" list-unstyled">
+            <% for(var i=0; i<posts.length; i++) {%>
+              <li>
+                
+                <div class="">
+                   
+                    
+                    <img class="img-fluid" src="<%=posts[i].image%>" />
+                </div>
+                <div class="card shadow-lg">
+                    <div class="card-body post-bg">
+                        <div class="row justify-content-between">
+                      
+                            <h2 ><strong><%= posts[i].title %></strong></h2>
+                            <p><%= posts[i].description %></p>
+      
+                          <form
+                            action="/post/deletePost/<%= posts[i]._id %>?_method=DELETE"
+                            method="POST"
+                            class="col-1"
+                          >
+                            <button class="btn btn-info fa fa-trash btn-lg" type="submit"></button>
+                          </form>
+                          <span class="text-muted col-3"><%=` ${posts[i].createdAt.toDateString()}` %></span>
+                        
+                      </div>
+                    </div>
+                </div>
+                
+                
+              </li><hr>
+            <% } %>
+        </ul>
+    </div>
+  </div>
+<!--Hard coded Birthday message start-->
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <ul class=" list-unstyled">
+           
+              <li>
+                
+                <div class="">
+                   
+                    
+                    <img class="img-fluid" src="https://i.ibb.co/mBhXTJg/IMG-1188.jpg" />
+                </div>
+                <div class="card shadow-lg">
+                    <div class="card-body post-bg">
+                        <div class="row justify-content-between">
+                      
+                            <h2 >🥳<strong>Happy Birthday Mom!</strong>🥳</h2>
+                            <p>Thank you so much for everything you do! I love you very much!🎊🎊🎈
+                                -Leandro
+                            </p>
+      
+                          
+                        
+                          <span class="text-muted col-4">09-28-2022</span>
+                        
+                      </div>
+                    </div>
+                </div>
+                
+                
+              </li><hr>
+           
+        </ul>
+    </div>
+  </div>
+<!--Hard coded Birthday message end-->
 
 <%- include('partials/footer') -%>

@@ -7,5 +7,24 @@
    background-image: url('https://imgs.search.brave.com/lclevPZJV6MS0wDco7DO4gr-pinI-opsQV-jIkQA63I/rs:fit:466:700:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmluZWFydGFt/ZXJpY2EuY29tL2lt/YWdlcy9hcnR3b3Jr/aW1hZ2VzL21lZGl1/bS8xL2xvdWlzLXZ1/aXR0b24tYmVsbC1z/YW1lLXRyYW5zcGFy/ZW50LnBuZw');
 }
 body{
-   font-family: 'Merriweather', serif;
+   /* font-family: 'Courgette', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Emilys Candy', cursive;
+font-family: 'Fredoka One', cursive; */
+font-family: 'Merriweather', serif;
+}
+.post-bg{
+   background-color: #FEF8EC;
+   /* color: #FFD700; */
+   /* color: #9F7042; */
+}
+.form-font-fam{
+   font-family: 'Fredoka One', cursive;
+}
+.post-font-fam{
+   font-family: 'Emilys Candy', cursive;
+   font-size: 1.5rem;
+}
+.titl-font{
+   font-family: 'Courgette', cursive; 
 }
